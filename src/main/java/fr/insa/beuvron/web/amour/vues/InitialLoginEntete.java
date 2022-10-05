@@ -19,6 +19,7 @@
 package fr.insa.beuvron.web.amour.vues;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.notification.Notification;
 import fr.insa.beuvron.web.amour.VuePrincipale;
 
 /**
@@ -44,6 +45,13 @@ public class InitialLoginEntete extends MyHorizontalLayout {
             this.main.setMainContent(new NouvelUtilisateur(this.main));
         });
         this.add(this.vbLogin,this.vbNouvelUtilisateur);
+        
+        Button enPlus = new Button("dis coucou");
+        enPlus.addClickListener((event) -> {
+            Notification.show("Ah que coucou");
+        });
+        this.add(enPlus);
+
     }
     
 }
